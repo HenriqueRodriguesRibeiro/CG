@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Flor - Computação Gráfica</title>
+    <style>
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0; margin: 0; }
+        canvas { background-color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <canvas id="canvasFlor" width="300" height="300"></canvas>
+    <script>
+        const ctx = document.getElementById('canvasFlor').getContext('2d');
+
+        function desenharFlor(x, y) {
+            // Caule
+            ctx.fillStyle = 'green';
+            ctx.fillRect(x - 5, y, 10, 100);
+
+            // Pétalas usando trigonometria
+            ctx.fillStyle = 'pink';
+            for (let i = 0; i < 6; i++) {
+                ctx.beginPath();
+                let angulo = (i * Math.PI * 2) / 6;
+                let petalaX = x + Math.cos(angulo) * 20;
+                let petalaY = y + Math.sin(angulo) * 20;
+                ctx.arc(petalaX, petalaY, 20, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Miolo da flor
+            ctx.beginPath();
+            ctx.fillStyle = 'gold';
+            ctx.arc(x, y, 15, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        desenharFlor(150, 100); // Coordenadas ajustadas para o centro do novo canvas
+    </script>
+</body>
+</html>
