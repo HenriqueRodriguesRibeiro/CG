@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 2 - Retas e Triângulos com Bresenham</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #222;
+      color: #eee;
+    }
+    canvas {
+      background: #ffffff;
+      border: 1px solid #555;
+      margin-top: 16px;
+      cursor: crosshair;
+    }
+    #info {
+      margin-top: 8px;
+      font-size: 14px;
+      max-width: 620px;
+      text-align: center;
+    }
+    #modo {
+      margin-top: 6px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Exercício 2 — Retas e Triângulos (Bresenham)</h2>
+  <div id="info">
+    Pressione <b>R</b> para o modo reta (2 cliques) ou <b>T</b> para o modo triângulo (3 cliques).<br>
+    Pressione <b>0</b> a <b>9</b> para mudar a cor. Apenas uma figura fica na tela por vez.
+  </div>
+  <div id="modo">Modo atual: reta</div>
+  <canvas id="canvas" width="600" height="400"></canvas>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pong</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #050505;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #eee;
+        }
+
+        #placar {
+            font-size: 48px;
+            letter-spacing: 20px;
+            font-weight: bold;
+        }
+
+        #placarEsquerda { color: #33ff66; }
+        #placarDireita { color: #3366ff; }
+
+        #campo {
+            position: relative;
+        }
+
+        canvas {
+            display: block;
+            border: 2px solid #444;
+            background: #1a1a1a;
+        }
+
+        #linhaMeio {
+            position: absolute;
+            top: 2px;
+            bottom: 2px;
+            left: 50%;
+            width: 0;
+            border-left: 3px dashed #555;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        #instrucoes {
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="placar">
+        <span id="placarEsquerda">0</span> : <span id="placarDireita">0</span>
+    </div>
+
+    <div id="campo">
+        <canvas id="canvas" width="550" height="550"></canvas>
+        <div id="linhaMeio"></div>
+    </div>
+
+    <div id="instrucoes">Esquerda: W / S &nbsp;&nbsp;|&nbsp;&nbsp; Direita: Seta cima / Seta baixo</div>
+
+    <script src="m3.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
