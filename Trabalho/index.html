@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Arwing - Corneria</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #222;
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding-top: 20px;
+        }
+        canvas {
+            border: 2px solid #fff;
+            margin-top: 15px;
+            border-radius: 4px;
+            cursor: grab;
+        }
+        canvas:active { cursor: grabbing; }
+        .legenda {
+            background: #333;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #555;
+        }
+        .legenda p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+    <div class="legenda">
+        <p><strong>STAR FOX - ARWING SOBREVOANDO CORNERIA</strong></p>
+        <p><strong>Mouse (arrastar)</strong> : girar a câmera em volta da cena</p>
+        <p><strong>Scroll</strong> : zoom &nbsp;|&nbsp; <strong>Espaço</strong> : liga/desliga rotação automática da câmera</p>
+    </div>
+
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <script src="m4.js"></script>
+    <script src="arwingGeometry.js"></script>
+    <script src="sceneGeometry.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
