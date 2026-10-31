@@ -27,17 +27,33 @@
             border-radius: 8px;
             text-align: center;
             border: 1px solid #555;
+            max-width: 760px;
         }
         .legenda p { margin: 5px 0; }
+        .legenda .teclas { color: #9cd0ff; }
+        #hud {
+            background: #111;
+            color: #7fff9c;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            margin-top: 12px;
+            border: 1px solid #444;
+        }
+        #hud strong { color: #fff; }
     </style>
 </head>
 <body>
 
     <div class="legenda">
         <p><strong>STAR FOX - ARWING SOBREVOANDO CORNERIA</strong></p>
-        <p><strong>Mouse (arrastar)</strong> : girar a câmera em volta da cena</p>
-        <p><strong>Scroll</strong> : zoom &nbsp;|&nbsp; <strong>Espaço</strong> : liga/desliga rotação automática da câmera</p>
+        <p class="teclas"><strong>Câmeras:</strong> 1 Orbital &nbsp;|&nbsp; 2 Perseguição &nbsp;|&nbsp; 3 Torre fixa &nbsp;|&nbsp; 4 Visão superior &nbsp;|&nbsp; C cicla</p>
+        <p class="teclas"><strong>Luzes:</strong> Z liga/desliga Sol &nbsp;|&nbsp; X liga/desliga Holofote &nbsp;|&nbsp; F liga/desliga Névoa</p>
+        <p><strong>Mouse (arrastar)</strong> : girar câmera orbital &nbsp;|&nbsp; <strong>Scroll</strong> : zoom &nbsp;|&nbsp; <strong>Espaço</strong> : rotação automática</p>
     </div>
+
+    <div id="hud"></div>
 
     <canvas id="canvas" width="800" height="600"></canvas>
 
